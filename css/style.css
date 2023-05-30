@@ -284,8 +284,9 @@ header {
 }
 
 .bl {
-  width: 1340px;
-  padding-left: 80px;
+  max-width: 1340px;
+  width: 100%;
+  padding: 0 80px;
 }
 .bll {
   max-width: 1440px;
@@ -349,6 +350,7 @@ header {
   top: 10px;
   z-index: 1;
   background-color: #fff;
+  box-shadow: 0px 24px 28px rgba(128, 138, 147, 0.06);
 }
 .blog_list-latest {
   max-width: 1440px;
@@ -361,7 +363,7 @@ header {
   padding-top: 120px;
   background-color: #fff;
 }
-.blnav {
+.blnav{
 justify-content: flex-start;
 padding-top: 24px;
 padding-bottom: 31px;
@@ -369,13 +371,17 @@ gap: 50px;
 position: relative;
 left: -80px;
 padding-left: 80px;
-width: 1400px;
-box-shadow: 0px 24px 28px rgba(128, 138, 147, 0.06);
+width: 100%;
+max-width: 1440px;
+/* box-shadow: 0px 24px 28px rgba(128, 138, 147, 0.06); */
 background-color: #fff;
+}
+.blog_list-nav {
+/*   box-shadow: 0px 24px 28px rgba(128, 138, 147, 0.06); */
+  background-color: #fff;
 }
 .bla {
   margin-left: 0;
-
 }
 .blog_list-grid {
 margin-top: 20px;
@@ -409,6 +415,10 @@ gap: 40px;
 }
 .blog_list-grid-pagination {
   margin: 0 auto;
+  z-index: 0;
+}
+.waves-effect {
+  z-index: 0;
 }
 .pagination {
   text-align: center;
@@ -451,7 +461,17 @@ gap: 40px;
   transition: 0.5s;
   cursor: pointer;
 }
+@media screen and (max-width: 1370px) {
+  .blog_about {
+    display: block;
+    padding-top: 100px;
+    gap: 48px;
 
+  }
+  .blog_list-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 /* footer */
@@ -602,8 +622,34 @@ footer {
 .footer__grid-item-4-a-img {
   cursor: pointer;
 }
+.blf {
+  margin-top: 14px;
+}
+.footer__grid-item-blog {
+  display: flex;
+  gap: 83px;
+  margin-top: 68px;
+}
+.footer__grid-item-blog-a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #39E6BD;
+}
 
 @media screen and (max-width: 1380px) {
+  .footer__grid-item-2 {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1230px) {
+
+  .footer__grid-item-blog {
+    display: none;
+  }
+  .footer__grid-item-2 {
+    display: none;
+  }
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
@@ -766,18 +812,4 @@ footer {
   .footer__grid-item-3-item-h3 {
     margin-top: 40px;
   }
-}
-.blf {
-  margin-top: 14px;
-}
-.footer__grid-item-blog {
-  display: flex;
-  gap: 83px;
-  margin-top: 68px;
-}
-.footer__grid-item-blog-a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #39E6BD;
 }
