@@ -305,6 +305,8 @@ header {
 }
 .blog_about-text {
   margin-top: 24px;
+  max-width: 630px;
+  width: 100%;
 }
 .blog_about-text-flex {
   display: flex;
@@ -461,13 +463,15 @@ gap: 40px;
   transition: 0.5s;
   cursor: pointer;
 }
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1270px) {
   .blog_about {
     display: block;
     padding-top: 100px;
     gap: 48px;
 
   }
+}
+  @media screen and (max-width: 1370px) {
   .blog_list-grid {
     grid-template-columns: repeat(2, 1fr);
     }
